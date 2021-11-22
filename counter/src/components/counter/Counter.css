@@ -20,7 +20,12 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-
+.even {
+  background-color: chartreuse;
+}
+.odd {
+  background-color: chocolate;
+}
 .Parity {
   position: absolute;
   top: 40%;

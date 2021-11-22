@@ -5,6 +5,7 @@ import "./Counter.css";
 export default function Counter() {
   const [count, setCount] = useState(0);
   const [parity, setParity] = useState("Введено четное число");
+  const [screenClass, setScreenClass] = useState("Screen even");
 
   const onClickMinus = (count) => {
     if (count > 0) {
@@ -14,15 +15,18 @@ export default function Counter() {
   };
 
   const checkParity = (count) => {
-    count % 2 === 0
-      ? setParity("Введено четное число")
-      : setParity("Введено нечетное число");
-    console.log(count);
+    if (count % 2 === 0) {
+      setParity("Введено четное число");
+      setScreenClass("Screen even");
+    } else {
+      setParity("Введено нечетное число");
+      setScreenClass("Screen odd");
+    }
   };
 
   return (
     <div>
-      <div className='Screen'>
+      <div className={screenClass}>
         <p>{count}</p>
       </div>
       <div className='Parity'>
