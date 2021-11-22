@@ -1,5 +1,9 @@
 .Main {
-  width: 500px;
-  height: 500px;
-  background-color: blue;
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  width: 600px;
+  height: 400px;
+  margin: 0;
+  border: 3px solid rgb(49, 49, 49);
 }
